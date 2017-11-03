@@ -1,4 +1,5 @@
 <?php
+include "signupprocess.php";
 $error=  array();
 if (count($error) > 0):?> 
 	<div class="error">
