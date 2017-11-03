@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,6 +17,9 @@
     <link rel="stylesheet" type="text/css" href="javas/homepage.js">
     <link rel="stylesheet" type="text/css" href="css/homepage.css">
 </head>
+
+
+
 <body>
 <div id="throbber" style="display:none; min-height:120px;"></div>
 <div id="noty-holder"></div>
@@ -34,9 +41,10 @@
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
            
-            </li>            
+            
+
             <li class="dropdown">
-                <a href="login.php" class="dropdown-toggle" data-toggle="dropdown"> <b class="fa fa-angle-down"></b></a>
+                <a href="profile.php?name=<?php echo $_SESSION['userName'];?>" class="dropdown-toggle" data-toggle="dropdown"> <b class="fa fa-angle-down"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="profile.php"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
                    
@@ -49,23 +57,22 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav side-nav">
                 <li>
-                    <a href="#" data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-user-plus"></i> Create<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <a  data-toggle="collapse" data-target="#submenu-1"><i class="fa fa-fw fa-user-plus"></i> Create<i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-1" class="collapse">
                         <li><a href="signup.php"><i class="fa fa-angle-double-right"></i> Add patient</a></li>
-                        <li><a href="adduser.php"><i class="fa fa-angle-double-right"></i>Add user</a></li>
-                        <li><a href=" "><i class="fa fa-angle-double-right"></i> Add doctor</a></li>
+                        <li><a href="addusers.php"><i class="fa fa-angle-double-right"></i>Add user</a></li>
+                        <li><a href="record.php "><i class="fa fa-angle-double-right"></i> Update patient profile</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-user"></i>  Delete  <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-2" class="collapse">
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> Delete </a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.2</a></li>
-                        <li><a href="#"><i class="fa fa-angle-double-right"></i> SUBMENU 2.3</a></li>
+                        <li><a href="delete.php"><i class="fa fa-angle-double-right"></i> Delete </a></li>
+                        
                     </ul>
                 </li>
                 <li>
-                    <a href="read.php"><i class="fa fa-fw fa-"></i>  View patient details</a>
+                    <a href="patientprofile.php"><i class="fa fa-fw fa-"></i>  View patient details</a>
                 </li>
                
               

@@ -1,6 +1,5 @@
 <?php
 require_once "connect.php";
-//include ("processes/signupprocess.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,44 +29,42 @@ require_once "connect.php";
   </head>
   <body>
 
-
     <div class="container">
       <div class="row main">
         <div class="main-login main-center">
        
-          
-             <h5>Register for an account</h5>
+                       <h5>Add new system user</h5>
 
             <!--shows where to display error message-->
-            <?php include ("processes/error.php");?>
-          <form class="form-signup" method="POST" action="processes/signupprocess.php">  
+            
+          <form class="form-signup" method="POST" action="processes/adduserprocess.php">  
 
             <div class="form-group">
-              <label for="name1" class="cols-sm-2 control-label">First Name</label>
+              <label for="user_type" class="cols-sm-2 control-label">User Type</label>
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="name1" placeholder="First Name" required/>
+                  <input type="text" class="form-control" name="user_type" placeholder="user_type" required />
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="name2" class="cols-sm-2 control-label">Last Name</label>
+              <label for="userName" class="cols-sm-2 control-label">Full Name</label>
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="name2" id="name2"  placeholder="Last Name" required />
+                  <input type="text" class="form-control" name="userName" id="userName"  placeholder="userName" required />
                 </div>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="birth" class="cols-sm-2 control-label">Date Of Birth</label>
+              <label for="Id" class="cols-sm-2 control-label">User ID</label>
               <div class="cols-sm-10">
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-calendar fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="birth" id="birth"  placeholder="Enter Date Of Birth" required />
+                  <input type="text" class="form-control" name="Id" id="Id"  placeholder="User ID" required />
                 </div>
               </div>
             </div>
@@ -82,28 +79,15 @@ require_once "connect.php";
               </div>
             </div>
 
-                
-
-            <div class="form-group">
-              <label for="Kin" class="cols-sm-2 control-label">Next Of Kin</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-family fa-lg" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="Kin" id="Kin"  placeholder="Next Of Kin" required />
-                </div>
-              </div>
-            </div>
-
              <div class="form-group">
-              <label for="password1" class="cols-sm-2 control-label">Password</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-family fa-lg" aria-hidden="true"></i></span>
-                  <input type="password" class="form-control" name="password1" id="password1"  placeholder="Password" required />
-
-                </div>
+                 <label for="password" class="cols-sm-2 control-label">Password</label>
+                    <div class="cols-sm-10">
+                       <div class="input-group">
+                         <span class="input-group-addon"><i class="fa fa-family fa-lg" aria-hidden="true"></i></span>
+                          <input type="password" class="form-control" name="password" id="password"  placeholder="Password" required />
+                      </div>
+                  </div>
               </div>
-            </div>
 
              <div class="form-group">
               <label for="password1" class="cols-sm-2 control-label"> Confirm Password</label>
@@ -114,8 +98,8 @@ require_once "connect.php";
                 </div>
             </div>
               <div class="register button" align="center" style="width: 400px;">
-                  <input type="submit" name="register">
-                  <a href="read.php" class="btn btn-block btn-lg btn-primary"></a> 
+                  <input type="submit" name="addUser">
+                  <a  class="btn btn-block btn-lg btn-primary"></a> 
                 </div>
               </form>        
               </div>

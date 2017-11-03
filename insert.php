@@ -4,7 +4,7 @@
                 <?php
                 //Check if the user type to know which button to display
 
-                if ($_SESSION['user_type'] == 'Super Administrator'){
+                if ($_SESSION['user_type'] == ' Administrator'){
                        ?>
                <a href="add.php"><button type="button" class="btn btn-info btn-lg" >Add User</button></a>
                <?php
@@ -40,7 +40,7 @@ include'connect.php';
 $uid = $_SESSION['id'];
 
            //Selecting specific data for the logged in user
-         if ($_SESSION['user_type'] == 'Super Administrator'){
+         if ($_SESSION['user_type'] == 'Administrator'){
 
          $sql = "SELECT * FROM users where userId != $uid and user_type != 'Author' ";
               }
@@ -63,11 +63,11 @@ if ($result){
       <tr >
           <td><?php echo $no++; ?></td>
           <td><?php  echo $row['user_type']; ?></td>
-          <td><?php echo  $row['full_name']; ?></td>
-          <td><?php echo $row['email']; ?></td>
-          <td><?php  echo $row['phone_number']; ?></td>
+          <td><?php echo  $row['userName']; ?></td>
+          <td><?php echo $row['userId']; ?></td>
+          <td><?php  echo $row['phoneNumber']; ?></td>
           <td><?php  echo $row['access_time']; ?></td>
-          <td><?php  echo $row['address']; ?></td>
+          
 
         <td>
 

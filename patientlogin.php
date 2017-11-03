@@ -22,7 +22,7 @@
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-          <h1 class="text-center">Login as user</h1>
+          <h1 class="text-center">Patient login</h1>
         </div>
          <div class="modal-body">
              <div class="form-group">
@@ -40,12 +40,10 @@
                     <input type="submit" class="btn btn-block btn-lg btn-primary" name="login" value="Login"/>
                       
                 </div>
-               
-             </div>
-                <div class=" login button" align="center" style="width: 400px;">
-                        <!--<input type="submit" name="Patient Login">-->
-                     <a href="patientlogin.php" class="btn btn-block btn-lg btn-primary" name="Patient login" value=" Patient login"></a> 
+                <div class= "">
+                    
                 </div>
+            </div>
          </div>
     </div>
  </form> 
