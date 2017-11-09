@@ -1,7 +1,7 @@
   <?php
 
   include ("connect.php");
-// include "processes/loginprocess.php";
+ include ("processes/loginprocess.php");
  
     ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
      <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
 <body>    
-  <form class="form-signin" method="post" action="processes/loginprocess.php">
+  <form class="form-signin" method="post" >
 
 <div class="modal-dialog">
     <div class="modal-content">
@@ -42,10 +42,7 @@
                 </div>
                
              </div>
-                <div class=" login button" align="center" style="width: 400px;">
-                        <!--<input type="submit" name="Patient Login">-->
-                     <a href="patientlogin.php" class="btn btn-block btn-lg btn-primary" name="Patient login" value=" Patient login"></a> 
-                </div>
+               
          </div>
     </div>
  </form> 

@@ -1,6 +1,13 @@
 <?php
 session_start();
 
+if(!isset($_SESSION['use']))
+{
+    // not logged in
+    header('Location: login.php');
+    exit();
+}
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -87,6 +94,7 @@ session_start();
             <div class="row" id="main" >
                 <div class="col-sm-12 col-md-12 well" id="content">
                     <h1>Welcome!</h1>
+                    
                 </div>
             </div>
             <!-- /.row -->

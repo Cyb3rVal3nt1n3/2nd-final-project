@@ -1,5 +1,7 @@
 <?php
 require_once "connect.php";
+
+
 //include ("processes/signupprocess.php");
 ?>
 <!DOCTYPE html>

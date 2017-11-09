@@ -1,6 +1,7 @@
 <?php
 require_once 'connect.php';
 
+
  $query= "SELECT * FROM patient";
  $result = $conn->query($query);
   while ($row=mysqli_fetch_array($result)) {
@@ -16,7 +17,7 @@ require_once 'connect.php';
   	<table style=width:50%>
   	<tr>
   	<th> Patient Id</th>
-  	<th> First Name</th><br>
+  	<th> First Name</th>
   	<th> Last Name</th><br>
   	<th> Date of Birth</th>
   	<th> Contacts</th>

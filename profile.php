@@ -1,11 +1,16 @@
 <?php
 //Getting information on logged in user
-if (isset($userName)) {
-  require_once 'processes/connect.php';
-
+if(!isset($_SESSION['use']))
+{
+    // not logged in
+    header('Location: login.php');
+    
+}
+if (isset($userName)) { 
+ require_once 'processes/connect.php';
   $userName = $_GET['userName'];
 
-    $sql = "SELECT * FROM users WHERE userName=$userName";
+    $sql = "SELECT * FROM users WHERE userName='$userName'";
     $result = $conn->query($sql);
 
 //Check query
