@@ -14,6 +14,7 @@ if(!isset($_SESSION['use']))
 <head>
     <title></title>
     <!-- Latest compiled and minified CSS -->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -79,7 +80,11 @@ if(!isset($_SESSION['use']))
                     </ul>
                 </li>
                 <li>
-                    <a href="patientprofile.php"><i class="fa fa-fw fa-"></i>  View patient details</a>
+                    <a  data-toggle="collapse" data-target="#submenu-3"><i class=""></i> View Patient Profile<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <ul id="submenu-3" class="collapse">
+                        <li><a href="patientprofile.php"><i class="fa fa-angle-double-right"></i> select patient</a></li>
+                        
+                    </ul>
                 </li>
                
               

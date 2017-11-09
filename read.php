@@ -1,44 +1,34 @@
 <?php
-require_once 'connect.php';
+  require_once 'connect.php';
 
-
- $query= "SELECT * FROM patient";
+ $query= "SELECT * FROM patient ORDER BY patientId";
  $result = $conn->query($query);
   while ($row=mysqli_fetch_array($result)) {
-  	$patientId=$row['patientId'];
-  	$firstName=$row['firstName'];
-  	$lastName=$row['lastName'];
-  	$dateOfBirth=$row['dateOfBirth'];
-  	$phoneNumber=$row['phoneNumber'];
-  	$nextOfKin=$row['nextOfKin'];
+    ?>
+<div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Date of birth</th>
+      <th>Phone Number</th>
+      <th>Patient Id</th>
+      <th>Next of Kin</th>
+    </tr>
+    </thead>
+  	<tbody>
+      <tr >
+           <td><?php  echo $row['firstName']; ?></td>
+          <td><?php echo  $row['lastName']; ?></td>
+          <td><?php echo $row['dateOfBirth']; ?></td>
+          <td><?php  echo $row['phoneNumber']; ?></td>
+          <td><?php  echo $row['patientId']; ?></td>
+          <td><?php  echo $row['nextOfKin']; ?></td>
 
-  	
-  	echo "
-  	<table style=width:50%>
-  	<tr>
-  	<th> Patient Id</th>
-  	<th> First Name</th>
-  	<th> Last Name</th><br>
-  	<th> Date of Birth</th>
-  	<th> Contacts</th>
-  	<th> Next of kin</th>
-  	</tr>
-  	<tr>
-  	<td>$patientId<td>
-  	<td>$firstName</td>
-  	<td>$lastName</td>
-  	<td>$dateOfBirth</td>
-  	<td>$phoneNumber</td>
-  	<td>$nextOfKin</td><br>
-  	</tr>
-  	</table>";
-  }
+ </tr>
 
-
-
-?>
-
-
-
-
-
+  </tbody>
+  </table>
+</div>
+}    

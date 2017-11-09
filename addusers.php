@@ -15,7 +15,8 @@ require_once "connect.php";
 
 <link rel="stylesheet" type="text/css" href="css/signup.css">
     <!-- Website CSS style -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
 
     <!-- Website Font style -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
