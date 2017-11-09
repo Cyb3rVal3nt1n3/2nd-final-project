@@ -41,19 +41,27 @@ require_once "connect.php";
 
               <div class="form-group">
                  <label for="patientId" class="cols-sm-2 control-label">Patient id</label>
-                    <div class="cols-sm-10">
-                       <div class="input-group">
-                         <span class="input-group-addon"><i class="" aria-hidden="true"></i></span>
-                          <input type="text" class="form-control" name="patientId" id="patientId"  placeholder="patientId" required />
-                      </div>
-                  </div>
-              </div>
+                   
+                        <!--  <span class="input-group-addon"><i class="" aria-hidden="true"></i></span>
+                         -->
+                         <select class="selectpicker" name="patientId" required>
+                    <option value="" disabled selected>Patient ID</option>
+                     <?php
+            include("../connect.php");
+            $sql = mysqli_query($conn, "SELECT patientId FROM patient");   
+            $row = mysqli_num_rows($sql);
+            while ($row = mysqli_fetch_array($sql)){ echo "
+            <option value=".$row['patientId'].">" .$row['patientId'] ." </option>" ;
+}
+?>   
+                  </select>
+
 
          <div class="form-group">
               <label for="currentApp" class="cols-sm-2 control-label">Current appointment</label>
               <div class="cols-sm-10">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="" aria-hidden="true"></i></span>
+                 <!--  <span class="input-group-addon"><i class="" aria-hidden="true"></i></span> -->
                   <input type="date" class="form-control" name="currentApp" id="currentApp"  placeholder=" Current appointment" required />
                 </div>
               </div>
@@ -63,7 +71,7 @@ require_once "connect.php";
               <label for="illness" class="cols-sm-2 control-label">illness</label>
               <div class="cols-sm-10">
                 <div class="input-group">
-                  <span class="input-group-addon"><i class="" aria-hidden="true"></i></span>
+                  <!-- <span class="input-group-addon"><i class="" aria-hidden="true"></i></span> -->
                   <input type="text" class="form-control" name="illness" id="illness"  placeholder=" select illness" required />
                 </div>
               </div>
@@ -73,7 +81,7 @@ require_once "connect.php";
                  <label for="treatment" class="cols-sm-2 control-label">treatment</label>
                     <div class="cols-sm-10">
                        <div class="input-group">
-                         <span class="input-group-addon"><i class="" aria-hidden="true"></i></span>
+                         <!-- <span class="input-group-addon"><i class="" aria-hidden="true"></i></span> -->
                           <input type="text" class="form-control" name="treatment" id="treatment"  placeholder="treatment" required />
                       </div>
                   </div>
@@ -83,13 +91,13 @@ require_once "connect.php";
                  <label for="appointment" class="cols-sm-2 control-label">Future appointment</label>
                     <div class="cols-sm-10">
                        <div class="input-group">
-                         <span class="input-group-addon"><i class="" aria-hidden="true"></i></span>
+                        <!--  <span class="input-group-addon"><i class="" aria-hidden="true"></i></span> -->
                           <input type="date" class="form-control" name="appointment" id="appointment"  placeholder="appointment" required />
                       </div>
                   </div>
               </div>
 
-              <div class="form-group">
+              <!-- <div class="form-group">
                  <label for="recordId" class="cols-sm-2 control-label">Record Id</label>
                     <div class="cols-sm-10">
                        <div class="input-group">
@@ -97,10 +105,10 @@ require_once "connect.php";
                           <input type="number" class="form-control" name="recordId" id="recordId"  placeholder="record Id" required />
                       </div>
                   </div>
-              </div>
+              </div> -->
               <div class="register button" align="center" style="width: 400px;">
-                  <input type="submit" name="record">
-                  <a  class="btn btn-block btn-lg btn-primary"></a> 
+                  <input type="submit"  name="record">
+                  <a href="patientprofile.php" class="btn btn-block btn-lg btn-primary"></a> 
                 </div>
               </form>        
               </div>
