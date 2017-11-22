@@ -6,7 +6,7 @@ $patientId= $_GET['id'];
 if (isset($patientId)) {
 	 require_once '../connect.php';
 
-	$sql = "DELETE FROM patient WHERE patientId = '$patientId'";
+	$sql = "DELETE * FROM patient WHERE patientId = '$patientId'";
 
 	$process_sql = $conn->query($sql);
         

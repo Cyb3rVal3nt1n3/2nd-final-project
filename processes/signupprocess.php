@@ -24,10 +24,12 @@
             if ($password1 == $conf_pass){
     
     $hash_pass = bcrypt($conf_pass);
-    
+    $image = $_POST['image']['tmp_name'];
+     $image = $_FILES['image']['tmp_name'];
+          $imgContent = addslashes(file_get_contents($image));
   
-         $sql ="INSERT INTO patient(firstName,lastName,dateOfBirth,phoneNumber,patientId,nextOfKin,password)
-        VALUES('$firstName','$lastName','$dateOfBirth','$phoneNumber','$patientId','$nextOfKin','$hash_pass')";
+         $sql ="INSERT INTO patient(firstName,lastName,dateOfBirth,phoneNumber,patientId,nextOfKin, password,image)
+        VALUES('$firstName','$lastName','$dateOfBirth','$phoneNumber','$patientId','$nextOfKin', '$hash_pass' ,'$imageContent')";
 
         $process_sql = $conn->query($sql);
         

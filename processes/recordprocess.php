@@ -14,6 +14,7 @@
         
         if ($conn->query($sql) == TRUE) {
           echo "new record inserted successfully";
+          
 
           //header("Location:../patientProfile.php"); 
         }else{
@@ -22,3 +23,5 @@
       }
   
 ?>
+<br>
+<a href="../record.php"> <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" style="padding-top: 10px: padding-bottom:10px;">Back</button></a>
