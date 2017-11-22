@@ -29,6 +29,11 @@ if(!isset($_SESSION['use']))
 
 
 <body>
+    <style >
+        body{
+            background:url(https://i.ytimg.com/vi/4kfXjatgeEU/maxresdefault.jpg);
+        }
+    </style>
 <div id="throbber" style="display:none; min-height:120px;"></div>
 <div id="noty-holder"></div>
 <div id="wrapper">
@@ -52,7 +57,7 @@ if(!isset($_SESSION['use']))
             
 
             <li class="dropdown">
-                <a href="profile.php?name=<?php echo $_SESSION['userName'];?>" class="dropdown-toggle" data-toggle="dropdown"> <b class="fa fa-angle-down"></b></a>
+                <a href="profile.php?name=<?php echo $_SESSION['use'];?>" class="dropdown-toggle" data-toggle="dropdown"><?php echo $_SESSION['use'];?> <b class="fa fa-angle-down"></b></a>
                 <ul class="dropdown-menu">
                     <li><a href="profile.php"><i class="fa fa-fw fa-user"></i> Edit Profile</a></li>
                    
@@ -75,14 +80,15 @@ if(!isset($_SESSION['use']))
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#submenu-2"><i class="fa fa-fw fa-user"></i>  Delete  <i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-2" class="collapse">
-                        <li><a href="delete.php"><i class="fa fa-angle-double-right"></i> Delete </a></li>
+                        <li><a href="delete.php"><i class="fa fa-angle-double-right"></i> select Patient Id </a></li>
                         
                     </ul>
                 </li>
                 <li>
-                    <a  data-toggle="collapse" data-target="#submenu-3"><i class=""></i> View Patient Profile<i class="fa fa-fw fa-angle-down pull-right"></i></a>
+                    <a  data-toggle="collapse" data-target="#submenu-3"><i class=""></i> View Patients<i class="fa fa-fw fa-angle-down pull-right"></i></a>
                     <ul id="submenu-3" class="collapse">
-                        <li><a href="patientprofile.php"><i class="fa fa-angle-double-right"></i> select patient</a></li>
+                        <li><a href="read.php"><i class="fa fa-angle-double-right"></i> view registered patients</a></li>
+                        <li><a href="select.php"><i class="fa fa-angle-double-right"></i> view patient profile</a></li>
                         
                     </ul>
                 </li>
@@ -94,18 +100,18 @@ if(!isset($_SESSION['use']))
     </nav>
 
     <div id="page-wrapper">
-        <div class="container-fluid">
+       
             <!-- Page Heading -->
-            <div class="row" id="main" >
+            
                 <div class="col-sm-12 col-md-12 well" id="content">
                     <h1>Welcome!</h1>
-                    
+                   
                 </div>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container-fluid -->
+                
+            
+            
     </div>
+    dfghyjuik
     <!-- /#page-wrapper -->
 </div><!-- /#wrapper -->
 </body>

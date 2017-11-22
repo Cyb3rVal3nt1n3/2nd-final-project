@@ -101,7 +101,7 @@ require_once "connect.php";
             </div>
               <div class="register button" align="center" style="width: 400px;">
                   <input type="submit" name="addUser">
-                  <a  class="btn btn-block btn-lg btn-primary"></a> 
+                  
                 </div>
               </form>        
               </div>

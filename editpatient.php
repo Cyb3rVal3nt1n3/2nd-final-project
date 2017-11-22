@@ -2,6 +2,29 @@
 require_once "connect.php";
 
 ?>
+<?php
+
+        if(isset($_POST['edit'])){
+           $patientId= $_GET['id'];
+
+          $current_appointment= htmlspecialchars($_POST["currentApp"]);
+          $illness= htmlspecialchars($_POST["illness"]);
+          $treatment= htmlspecialchars($_POST['treatment']);
+          $appointment= htmlspecialchars($_POST['appointment']);     
+    
+  $sql = "UPDATE  records  SET current_appointment =  '$current_appointment', illness = ' $illness' ,treatment='$treatment ',futureAppointment = '$appointment' WHERE patientId='$patientId'";
+              
+        if ($conn->query($sql) == TRUE) {
+          echo "new record updated successfully";
+
+          //header("Location:../patientProfile.php"); 
+        }else{
+            echo "no record updated." .$conn->error;
+        }
+      }
+  
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head> 
@@ -34,27 +57,10 @@ require_once "connect.php";
       <div class="row main">
         <div class="main-login main-center">
        
-                       <h5>Enter patient record</h5>
+                       <h5>Edit patient record</h5>
 
             
-            <form class="form-signup" method="post" action="processes/recordprocess.php">
-
-              <div class="form-group">
-                 <label for="patientId" class="cols-sm-2 control-label">Patient id</label>
-                   
-                        <!--  <span class="input-group-addon"><i class="" aria-hidden="true"></i></span>
-                         -->
-                         <select class="selectpicker" name="patientId" required>
-                    <option value="" disabled selected>Patient ID</option>
-                     <?php
-            include("../connect.php");
-            $sql = mysqli_query($conn, "SELECT patientId, firstName FROM patient");   
-            $row = mysqli_num_rows($sql);
-            while ($row = mysqli_fetch_array($sql)){ echo "
-            <option value=".$row['patientId'].">" .$row['firstName'] ." </option>" ;
-}
-?>   
-                  </select>
+            <form class="form-signup" method="post" action="editpatient.php">     
 
 
          <div class="form-group">
@@ -107,8 +113,7 @@ require_once "connect.php";
                   </div>
               </div> -->
               <div class="register button" align="center" style="width: 400px;">
-                  <input type="submit"  name="record">
-                  <a href="patientprofile.php" class="btn btn-block btn-lg btn-primary"></a> 
+                 <a href="patientprofile.php"> <button type="button" class="btn btn-info" align="left" style="padding-top: 10px: padding-bottom:10px;">Edit</button></a> 
                 </div>
               </form>        
               </div>

@@ -43,7 +43,7 @@ require_once "connect.php";
 
             <!--shows where to display error message-->
             <?php include ("processes/error.php");?>
-          <form class="form-signup" method="POST" action="processes/signupprocess.php">  
+          <form class="form-signup" method="POST" action="processes/signupprocess.php" enctype="multipart/form-data">  
 
             <div class="form-group">
               <label for="name1" class="cols-sm-2 control-label">First Name</label>
@@ -93,6 +93,15 @@ require_once "connect.php";
                 <div class="input-group">
                   <span class="input-group-addon"><i class="fa fa-family fa-lg" aria-hidden="true"></i></span>
                   <input type="text" class="form-control" name="Kin" id="Kin"  placeholder="Next Of Kin" required />
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="image" class="cols-sm-2 control-label">Photo</label>
+              <div class="cols-sm-10">
+                <div class="input-group">
+                  <span class="input-group-addon"><i class="fa fa-family fa-lg" aria-hidden="true"></i></span>
+                  <input type="file" class="form-control" name="image" id="image"  placeholder="Image" required />
                 </div>
               </div>
             </div>

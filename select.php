@@ -1,7 +1,11 @@
 <?php
 require_once "connect.php";
 
-
+if (isset($_POST['profile'])){
+session_start();
+          $_SESSION["patientId"] = $_POST['patientId'];
+          header("location:patientProfile.php");
+          }
 
 ?>
 <!DOCTYPE html>
@@ -17,8 +21,7 @@ require_once "connect.php";
 
 <link rel="stylesheet" type="text/css" href="css/signup.css">
     <!-- Website CSS style -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Website Font style -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -32,27 +35,20 @@ require_once "connect.php";
 
   </head>
   <body>
-<style >
-  body{
-  background:url(https://i.ytimg.com/vi/4kfXjatgeEU/maxresdefault.jpg);
-  }
-</style>
 
     <div class="container">
       <div class="row main">
         <div class="main-login main-center">
        
-          
-             <h5>DELETE PATIENT FROM SYSTEM</h5>
-
+                      
             
-            
-          <form class="form-signup" method="POST" action="">  
+            <form class="form-signup" method="post" action="">
 
-             <div class="form-group">
-               <label for="patientId" class="cols-sm-2 control-label">Patient id</label>
-              
-                   <select class="selectpicker" name="patientId" required>
+              <div class="form-group">
+                 <label for="patientId" class="cols-sm-2 control-label">Patient id</label>
+                   
+                        
+                         <select class="selectpicker" name="patientId" required>
                     <option value="" disabled selected>Patient ID</option>
                      <?php
             include("../connect.php");
@@ -65,13 +61,11 @@ require_once "connect.php";
 
 ?>   
                   </select>
-            </div>
-              <div class="delete button" align="center" style="width: 400px;">
-                    <a  onclick="return confirm('Are you sure you want to delete')" href="processes/deleteprocess.php?id=<?php echo $row {'patientId'}; ?>"><button type="button" class="btn btn-danger" >Delete</button></a>
-                 
+<div class="register button" align="center" style="width: 400px;">
+                  <input type="submit"  name="profile">
+                  <a href="patientprofile.php" class="btn btn-block btn-lg btn-primary"></a> 
                 </div>
-              </form> 
-              <a href="homepage.php"> <button class="btn btn-basic" align="left" style="padding-top: 10px: padding-bottom:10px;">Back</button></a>       
+              </form>        
               </div>
             </div>
         </div> 
