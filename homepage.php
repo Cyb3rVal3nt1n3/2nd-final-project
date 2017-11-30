@@ -28,12 +28,8 @@ if(!isset($_SESSION['use']))
 
 
 
-<body>
-    <style >
-        body{
-            background:url(https://i.ytimg.com/vi/4kfXjatgeEU/maxresdefault.jpg);
-        }
-    </style>
+<body style="background-image: url(http://www.apsaidal.com/wp-content/uploads/2016/09/2-4.jpg);">
+   
 <div id="throbber" style="display:none; min-height:120px;"></div>
 <div id="noty-holder"></div>
 <div id="wrapper">
@@ -74,7 +70,7 @@ if(!isset($_SESSION['use']))
                     <ul id="submenu-1" class="collapse">
                         <li><a href="signup.php"><i class="fa fa-angle-double-right"></i> Add patient</a></li>
                         <li><a href="addusers.php"><i class="fa fa-angle-double-right"></i>Add user</a></li>
-                        <li><a href="record.php "><i class="fa fa-angle-double-right"></i> Update patient profile</a></li>
+                        <li><a href="record.php "><i class="fa fa-angle-double-right"></i> Record patient profile</a></li>
                     </ul>
                 </li>
                 <li>
@@ -104,15 +100,13 @@ if(!isset($_SESSION['use']))
             <!-- Page Heading -->
             
                 <div class="col-sm-12 col-md-12 well" id="content">
-                    <h1>Welcome!</h1>
+                    <h1 style="color: blue;">Welcome!</h1>
                    
-                </div>
-                
-            
+                </div>    
             
     </div>
-    dfghyjuik
-    <!-- /#page-wrapper -->
+   
+   
 </div><!-- /#wrapper -->
 </body>
 </html>

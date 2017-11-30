@@ -52,7 +52,7 @@ require_once "connect.php";
              <div class="form-group">
                <label for="patientId" class="cols-sm-2 control-label">Patient id</label>
               
-                   <select class="selectpicker" name="patientId" required>
+                    <select class="selectpicker" name="patientId" required>
                     <option value="" disabled selected>Patient ID</option>
                      <?php
             include("../connect.php");

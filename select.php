@@ -34,9 +34,9 @@ session_start();
     <title></title>
 
   </head>
-  <body>
+  <body style="background-image: url(http://www.apsaidal.com/wp-content/uploads/2016/09/2-4.jpg);">
 
-    <div class="container">
+    <div class="container" style="background-color: ">
       <div class="row main">
         <div class="main-login main-center">
        
@@ -65,9 +65,13 @@ session_start();
                   <input type="submit"  name="profile">
                   <a href="patientprofile.php" class="btn btn-block btn-lg btn-primary"></a> 
                 </div>
-              </form>        
+             </form>    
+
               </div>
+               <td><a href="homepage.php"> <button class="btn btn-info" align="left" style="padding-top: 10px: padding-bottom:10px;">Back</button></a></td>
             </div>
+          
         </div> 
+        
   </body>
 </html>

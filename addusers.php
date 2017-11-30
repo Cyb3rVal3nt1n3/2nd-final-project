@@ -61,23 +61,15 @@ require_once "connect.php";
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="Id" class="cols-sm-2 control-label">User ID</label>
-              <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-calendar fa" aria-hidden="true"></i></span>
-                  <input type="text" class="form-control" name="Id" id="Id"  placeholder="User ID" required />
-                </div>
-              </div>
-            </div>
+         
 
             <div class="form-group">
               <label for="phone" class="cols-sm-2 control-label">Your Phone Number</label>
               <div class="cols-sm-10">
-                <div class="input-group">
-                  <span class="input-group-addon"><i class="fa fa-phone fa" aria-hidden="true"></i></span>
+                
+                  <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
                   <input type="text" class="form-control" name="phone" id="phone"  placeholder="Enter your Phone Number" required />
-                </div>
+                
               </div>
             </div>
 
@@ -99,11 +91,11 @@ require_once "connect.php";
                    </div>
                 </div>
             </div>
-              <div class="register button" align="center" style="width: 400px;">
-                  <input type="submit" name="addUser">
-                  
-                </div>
-              </form>        
+              <div class="register button" align="center" style="width: 300px;">                  
+                   <input type="submit" class="btn btn-warning" value="Add User" name="addUser">
+                    </div>
+              </form>  
+              <div align="center" style="width: 300px;"> <a href="homepage.php"> <button class="btn btn-info" align="left" style="padding-top: 10px: padding-bottom:10px;">Back</button></a></div>      
               </div>
             </div>
         </div> 
