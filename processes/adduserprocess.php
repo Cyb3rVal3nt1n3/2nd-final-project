@@ -11,7 +11,6 @@
   }
 
           $user_type= htmlspecialchars($_POST["user_type"]);
-          $userId= htmlspecialchars($_POST['Id']);
           $userName= htmlspecialchars($_POST['userName']);
           $phoneNumber= htmlspecialchars($_POST['phone']);
           $password= htmlspecialchars($_POST['password']);
@@ -21,8 +20,8 @@
     
     $hash_pass = bcrypt($conf_pass);
     
-         $sql ="INSERT INTO users (user_type,userId,userName,phoneNumber, password)
-        VALUES('$user_type','$userId','$userName','$phoneNumber','$hash_pass')";
+         $sql ="INSERT INTO users (user_type,userName,phoneNumber, password)
+        VALUES('$user_type','$userName','$phoneNumber','$hash_pass')";
 
         $process_sql = $conn->query($sql);
         

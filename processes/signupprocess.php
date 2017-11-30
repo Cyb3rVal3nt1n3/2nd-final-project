@@ -24,12 +24,12 @@
             if ($password1 == $conf_pass){
     
     $hash_pass = bcrypt($conf_pass);
-    $image = $_POST['image']['tmp_name'];
+    //$image = $_POST['image']['tmp_name'];
      $image = $_FILES['image']['tmp_name'];
           $imgContent = addslashes(file_get_contents($image));
   
-         $sql ="INSERT INTO patient(firstName,lastName,dateOfBirth,phoneNumber,patientId,nextOfKin, password,image)
-        VALUES('$firstName','$lastName','$dateOfBirth','$phoneNumber','$patientId','$nextOfKin', '$hash_pass' ,'$imageContent')";
+         $sql ="INSERT INTO patient(firstName,lastName,dateOfBirth,phoneNumber,nextOfKin, password,image)
+        VALUES('$firstName','$lastName','$dateOfBirth','$phoneNumber','$nextOfKin', '$hash_pass' ,'$imgContent')";
 
         $process_sql = $conn->query($sql);
         
@@ -63,10 +63,6 @@
             
             }
 
-            if (empty($_POST['patientId'])) {
-             array_push($error, "PatientId is a mandatory field");
-            
-            }
 
           //   if (empty($_POST['kin'])) {
           //  array_push($error, "Next Of Kin is a mandatory field");

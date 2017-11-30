@@ -1,3 +1,4 @@
+
 <?php
         if(isset($_POST['record'])){
             require_once '../connect.php';
@@ -24,4 +25,6 @@
   
 ?>
 <br>
-<a href="../record.php"> <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit" style="padding-top: 10px: padding-bottom:10px;">Back</button></a>
+
+<div class="register button" align="center" style="width: 400px;">
+                 <a href="../read.php"> <button type="button" class="btn btn-warning" align="left" style="padding-top: 10px: padding-bottom:10px;">Back</button></a>
